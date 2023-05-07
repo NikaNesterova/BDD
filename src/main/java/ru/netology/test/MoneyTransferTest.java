@@ -1,13 +1,13 @@
-package ru.netology.web.test;
+package ru.netology.test;
 
 import lombok.val;
 import org.junit.jupiter.api.Test;
-import ru.netology.web.data.DataHelper;
-import ru.netology.web.page.LoginPageV2;
+import ru.netology.data.DataHelper;
+import ru.netology.page.LoginPageV2;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.netology.web.data.DataHelper.generateValidAmount;
+import static ru.netology.data.DataHelper.generateValidAmount;
 
 public class MoneyTransferTest {
     @Test
