@@ -1,8 +1,8 @@
 package ru.netology.page;
 
 import com.codeborne.selenide.SelenideElement;
+import org.jetbrains.annotations.NotNull;
 import ru.netology.data.DataHelper;
-import ru.netology.web.page.DashboardPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -23,7 +23,7 @@ public class VerificationPage {
         return new DashboardPage();
     }
 
-    public void invalidVerify(DataHelper.VerificationCode verificationCode) {
+    public void invalidVerify(DataHelper.@NotNull VerificationCode verificationCode) {
         codeField.setValue(verificationCode.getCode());
         verifyButton.click();
         errorBox.shouldBe(visible);

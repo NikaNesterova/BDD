@@ -3,7 +3,6 @@ package ru.netology.page;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 import ru.netology.data.DataHelper;
-import ru.netology.web.page.DashboardPage;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;

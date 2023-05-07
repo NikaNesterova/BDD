@@ -1,7 +1,7 @@
 package ru.netology.test;
 
 import lombok.val;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import ru.netology.data.DataHelper;
 import ru.netology.page.LoginPageV2;
 
@@ -11,7 +11,7 @@ import static ru.netology.data.DataHelper.generateValidAmount;
 
 public class MoneyTransferTest {
     @Test
-    void shouldTransferMoneyBetweenOwnCardsV1() {
+    public void shouldTransferMoneyBetweenOwnCardsV1() {
         open("http://localhost:9999");
         var loginPage = new LoginPageV2();
         var authInfo = DataHelper.getAuthInfo();
@@ -34,7 +34,7 @@ public class MoneyTransferTest {
     }
 
     @Test
-    void shouldTransferMoneyBetweenOwnCardsV2() {
+    public void shouldTransferMoneyBetweenOwnCardsV2() {
 
         open("http://localhost:9999");
         var loginPage = new LoginPageV2();
@@ -58,7 +58,7 @@ public class MoneyTransferTest {
     }
 
     @Test
-    void shouldFailToAuthorizeWithInvalidVerificationCode() {
+    public void shouldFailToAuthorizeWithInvalidVerificationCode() {
         open("http://localhost:9999");
         var loginPage = new LoginPageV2();
         var authInfo = DataHelper.getAuthInfo();
@@ -68,7 +68,7 @@ public class MoneyTransferTest {
     }
 
     @Test
-    void shouldFailToAuthorizeWithInvalidVerificationCode2() {
+    public void shouldFailToAuthorizeWithInvalidVerificationCode2() {
         open("http://localhost:9999");
         var loginPage = new LoginPageV2();
         var authInfo = DataHelper.getOtherAuthInfo();
